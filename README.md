@@ -1,2 +1,2 @@
 # signature-app
-App de assinatura digital em React e React Native
+App de assinatura digital em React e React Native.
