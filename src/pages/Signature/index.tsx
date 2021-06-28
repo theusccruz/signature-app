@@ -2,8 +2,8 @@ import React, { useRef } from 'react';
 import SignatureScreen, {
   SignatureViewRef,
 } from 'react-native-signature-canvas';
-import { View, ViewRow } from './styles';
-import ButtonNative from '../../components/ButtonNative';
+import { View, ViewRow, Row, Title } from './styles';
+import Button from '../../components/Button';
 
 interface Props {
   text: string;
@@ -27,12 +27,30 @@ const Signature: React.FC<Props> = ({ onOK, text }) => {
     ref.current?.readSignature();
   };
 
+  const style = `
+  .m-signature-pad--footer{
+    display: none;
+     margin: 0px;
+
+    }
+    .m-signature-pad--body {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 20px;
+    bottom: 60px;
+    border: 1px solid #f4f4f4;
+}
+    `;
+
   return (
     <View>
-      <SignatureScreen ref={ref} onOK={handleSignature} />
+      <Title>Assinatura Digital</Title>
+      <SignatureScreen ref={ref} onOK={handleSignature} webStyle={style} />
+      <Row />
       <ViewRow>
-        <ButtonNative onPress={() => handleClear()}>Limpar</ButtonNative>
-        <ButtonNative onPress={() => handleConfirm()}>Confirmar</ButtonNative>
+        <Button contentWidth={120} contentHeight={60} fontSize={18} buttonColor="#cecccc" fontColor="#000" onPress={() => handleClear()}>Limpar</Button>
+        <Button contentWidth={120} contentHeight={60} fontSize={18} onPress={() => handleConfirm()}>Confirmar</Button>
       </ViewRow>
     </View>
   );
