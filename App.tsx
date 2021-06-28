@@ -9,7 +9,7 @@ import SignatureWeb from './src/pages/SignatureWeb';
 export default function App() {
   return (
     <>
-      {Platform.OS === 'ios' || Platform.OS === 'android'  ? <Signature />  : <SignatureWeb /> }
+      {Platform.OS === 'web'  ? <SignatureWeb />  : <Signature /> }
     </>
   );
 }
