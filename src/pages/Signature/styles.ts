@@ -1,23 +1,33 @@
 import styled from 'styled-components/native';
 
 export const View = styled.View`
-  flex: 1;
+  flex:1;
   align-items: center;
   justify-content: center;
-  height: 250px;
-  padding: 10px;
-`;
+
+  `;
 
 export const ViewRow = styled.View`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
+  height: 70px;
   align-items: center;
-`;
+  `;
 
-export const Button = styled.TouchableOpacity`
-  width: 200px;
-  height: 200px;
-  background-color: #f44;
-`;
+export const Row = styled.View`
+  width: 90%;
+  position: absolute;
+  bottom: 140px;
+  height: 1px;
+  background-color: #000;
+
+  `;
+
+export const Title = styled.Text`
+  color: #000;
+  margin-top: 3%;
+  font-size: 25px;
+
+  `;
