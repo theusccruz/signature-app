@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, Text, TouchableOpacityProps } from 'react-native';
+import { TouchableOpacity, Text, TouchableOpacityProps, StyleProp, ViewStyle } from 'react-native';
 
 import { ButtonContainer, ButtonText } from './styles';
 
@@ -11,6 +11,7 @@ interface ButtonProps extends TouchableOpacityProps {
   buttonColor?: string;
   contentWidth?: number;
   contentHeight?: number;
+  buttonStyle?: StyleProp<ViewStyle>;
 }
 
 const Button: React.FC<ButtonProps> = ({ 
@@ -20,7 +21,8 @@ const Button: React.FC<ButtonProps> = ({
   fontColor,
   buttonColor,
   contentWidth,
-  contentHeight, 
+  contentHeight,
+  buttonStyle, 
   ...rest
 }) => {
 
@@ -29,6 +31,7 @@ const Button: React.FC<ButtonProps> = ({
       backgroundColor={buttonColor}
       width={contentWidth}
       height={contentHeight}
+      style={buttonStyle}
       {...rest}
     >
       <ButtonText fontSize={fontSize} fontFamily={fontFamily} color={fontColor} >
