@@ -1996,7 +1996,11 @@
     "@types/react-native" "*"
     "@types/styled-components" "*"
 
+<<<<<<< HEAD
+"@types/styled-components@*":
+=======
 "@types/styled-components@*", "@types/styled-components@^5.1.10":
+>>>>>>> 05c000354519f60b6b51d27d691e581b73c33f1b
   version "5.1.10"
   resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-5.1.10.tgz#b509da9d62be8a02cefd88ec6b820f417429a503"
   integrity sha512-g3ZfWlTiyXktASIhcfCicZtqB/fFFnq0a7kPYYxKXNggdrohp8m/9bMmmt3zDvHj2gplWDGCkZByfFnEXfbSWg==
