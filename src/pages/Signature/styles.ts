@@ -2,9 +2,9 @@ import styled from 'styled-components/native';
 
 export const View = styled.View`
   flex: 1;
-  align-items: 'center';
-  justify-content: 'center';
-  height: 250;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
   padding: 10px;
 `;
 
@@ -13,7 +13,7 @@ export const ViewRow = styled.View`
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  align-items: 'center';
+  align-items: center;
 `;
 
 export const Button = styled.TouchableOpacity`
