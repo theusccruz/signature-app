@@ -18,12 +18,12 @@ export const ButtonContainer = styled.TouchableOpacity<ButtonStyleProps>`
 
   ${props => 
     props.width && css`
-      width: ${props.width}  
+      width: ${props.width}px;  
   `}
 
   ${props => 
     props.height && css`
-      height: ${props.height}  
+      height: ${props.height}px;  
   `}
 
   background-color: #020887;
@@ -31,7 +31,7 @@ export const ButtonContainer = styled.TouchableOpacity<ButtonStyleProps>`
 
   ${props => 
     props.backgroundColor && css`
-      background-color: ${props.backgroundColor}  
+      background-color: ${props.backgroundColor}; 
   `}
 
   align-items: center;
@@ -45,16 +45,16 @@ export const ButtonText = styled.Text<ButtonTextStyleProps>`
 
   ${props => 
     props.fontSize && css`
-      font-size: ${props.fontSize}  
+      font-size: ${props.fontSize}px;  
   `}
 
   ${props => 
     props.fontFamily && css`
-      font-family: ${props.fontFamily}  
+      font-family: ${props.fontFamily};  
   `}
 
   ${props => 
     props.color && css`
-      color: ${props.color}  
+      color: ${props.color};  
   `}
 `;

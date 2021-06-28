@@ -1,40 +1,42 @@
-import React, { useRef } from 'react'
-import { StyleSheet } from 'react-native'
-import Signaturepad from 'react-signature-canvas'
+import React, { useRef, useCallback } from 'react'
+import SignatureCanvas from 'react-signature-canvas'
 
+import { Container, Content } from './styles';
+import Button from '../../components/Button';
 
 const SignatureWeb: React.FC = () => {
+  const signRef = useRef<SignatureCanvas>(null);
 
-  const sigCanvas = useRef<Signaturepad>(null)
-  const clear = () => {
-    sigCanvas.current?.clear()
-  }
+  const clear = useCallback(() => {
+    signRef.current?.clear();
+  }, []);
 
-  const save = () =>
-    console.log(sigCanvas.current?.getTrimmedCanvas().toDataURL("image/png", 1));
+  const save = useCallback(() => {
+    console.log(
+      signRef.current?.getTrimmedCanvas()
+        .toDataURL("image/png")
+        .replace("data:image/png;base64,", "")
+    );
+  }, []);
 
   return (
-    <div>
-      <h1>Signature example</h1>
-      <Signaturepad
-        ref={sigCanvas}
-        canvasProps={styles.container}
-
-      />
-      <button onClick={clear}>CLEAR</button>
-      <button onClick={save}>SAVE</button>
-
-    </div>
-  )
-
+    <Container>
+      <Content>
+        <h1>Signature example</h1>
+        <SignatureCanvas
+          ref={signRef}
+          backgroundColor="#fff"
+        />
+        <Button onPress={() => console.log(123)}> 
+          Apagar
+        </Button>
+        <Button> 
+          Confirmar
+        </Button>
+        <button onClick={save}>SAVE</button>
+      </Content>
+    </Container>
+  );
 }
 
 export default SignatureWeb
-
-
-const styles = StyleSheet.create({
-  container: {
-    width: '100%',
-    height: 500,
-  }
-})
