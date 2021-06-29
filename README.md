@@ -14,7 +14,7 @@ Executar um `yarn` para instalar as dependências do projeto
 
 ## Digital signature in Expo mobile and Expo WEB
 
-**Libraries used:** [react-native-signature-canvas](https://www.npmjs.com/package/react-native-signature-canvas) e [react-signature-canvas
+**Libraries used:** [react-native-signature-canvas](https://www.npmjs.com/package/react-native-signature-canvas) and [react-signature-canvas
 ](https://www.npmjs.com/package/react-signature-canvas)
 
 As a result, a base64 of the signature image is generated.<br>
