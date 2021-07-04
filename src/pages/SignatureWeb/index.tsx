@@ -1,5 +1,4 @@
 import React, { useRef, useCallback } from 'react'
-import { Text } from 'react-native';
 import SignatureCanvas from 'react-signature-canvas'
 
 import { Container, Content, PanelButtons, Title, Row } from './styles';
@@ -13,7 +12,7 @@ const SignatureWeb: React.FC = () => {
   }, []);
 
   const save = useCallback(() => {
-    console.log(
+    alert(
       signRef.current?.getTrimmedCanvas()
         .toDataURL("image/png")
         .replace("data:image/png;base64,", "")
